@@ -1,0 +1,93 @@
+<html>
+	<body>
+	<ul class="navbar">
+	    <li><a href="index.html">index.html</a></li>
+        <li><a href="tasks.html">tasks.html</a></li>
+        <li><a href="shopping.html">shopping.html</a></li>
+        <li><a href="https://www.paroles-musique.com/paroles-Dora_Lexploratrice-Dora_Lexploratrice-lyrics,p15577">paroles de dora</a></li>            
+
+    </ul> 
+	
+	<div>
+	<span id="new_element">
+		Here should appear our flower:
+	</span>
+	</div>
+	<div>
+	<span id="rainbow" style="font-size: 25px;">
+		<span>Don't</span>
+		<span>worry be</span>
+		<span>H</span>
+		<span>A</span>
+		<span>P</span>
+		<span>P</span>
+		<span>Y</span>
+	</span>
+	</div>
+	<div id="event">
+    	<div>
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+    	</div>
+    	<div>
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+    	</div>
+    	<div>
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+    	</div>
+    	<div>
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+    	</div>
+    	<div>
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+	    	<img src="flower1.png">
+    	</div>
+    </div>
+	<script>
+		let image = document.createElement("img");
+		image.src = "j1.png";
+		document.getElementById("new_element").appendChild(image);
+	</script>
+	<script>
+		let spans = document.getElementById("rainbow").children;
+		let colors = ["red", "orange","yellow","green","blue","purple","pink"];
+
+		for (var i = spans.length - 1; i >= 0; i--) {
+			spans[i].style.color = colors[i];
+		}
+	</script>
+	<script>
+		var changeSrc = function(event) {
+		if (event.target.src) {
+			let filename = event.target.src.replace(/^.*[\\\/]/, '');
+			if(filename=="flower1.png"){
+			event.target.src = "flower2.png";
+			}
+			else if(filename=="flower2.png"){
+				event.target.src = "flower1.png";
+			}
+		}
+		};
+
+		document.getElementById("event").addEventListener("mouseover", changeSrc);
+	</script>
+	</body>
+</html>

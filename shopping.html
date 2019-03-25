@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>      
+		<script type="text/javascript" src="functions.js"></script>
+		<link href="forms.css" rel="stylesheet"/>        
+   </head>
+    <body>
+		<div class="container">  
+		  <form onsubmit="return false;" id="contact">
+			<h3>Shopping List</h3>
+			
+			<input type="checkbox" id="first"> Is important <br>
+			<input type="checkbox" id="second"> Can be bought in groceries <br>
+			
+			<fieldset>
+		    <label for="item">Item to add to the list :</label>
+            <input id="item" name="item" type="text">
+			<button type="submit" onclick="addItem()">ADD</button>
+			</fieldset>
+			<fieldset>
+			</fieldset>
+			<fieldset>
+				<label>Index of element to remove :</label> 
+				<input type="number" id="removeField" min="0" max="1000"/></label>
+			<button type="submit" id="remove_button" onclick="removeItem()">REMOVE</button>
+			</fieldset>
+			<fieldset>
+				<ul id="emptyul"></ul>
+			</fieldset>	
+		  </form>	
+		</div>
+		<ul id="emptyul"></ul>
+    </body>  
+</html>
